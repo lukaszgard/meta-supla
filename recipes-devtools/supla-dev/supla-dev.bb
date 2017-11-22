@@ -6,9 +6,7 @@ LICENSE = "CLOSED"
 
 PR = "r1"
 
-SRCREV = "0bfe2a48775b1b524f15e9c41684db08b31c6c67"
-
-SRC_URI = "git://github.com/SUPLA/supla-core.git;protocol=https"
+inherit supla-core
 
 S = "${WORKDIR}/git/supla-dev"
 
