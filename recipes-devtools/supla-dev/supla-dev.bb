@@ -8,7 +8,11 @@ PR = "r1"
 
 inherit supla-core
 
+SRC_URI += "file://001-allows-to-use-cross-compiler-in-makefile-and-add-prefix-to-libs.patch"
+
 S = "${WORKDIR}/git/supla-dev"
+
+DEPENDS = "openssl"
 
 do_compile() {
     cd ${S}/Release/ 
