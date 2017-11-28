@@ -7,7 +7,7 @@ index 5e75fc4..b6e3288 100644
  	@echo 'Building target: $@'
  	@echo 'Invoking: Cross G++ Linker'
 -	g++ -pthread -lrt -o "supla-dev" $(OBJS) $(USER_OBJS) $(LIBS)
-+	$(CXX) $(CXXFLAGS) -pthread -lrt -o "supla-dev" $(addprefix -o ,$(OBJS)) $(USER_OBJS) $(LIBS)
++	$(CXX) ${LDFLAGS} -pthread -lrt -o "supla-dev" $(addprefix -o ,$(OBJS)) $(USER_OBJS) $(LIBS)
  	@echo 'Finished building target: $@'
  	@echo ' '
  
